@@ -1,0 +1,17 @@
+c:\users\10600798\documents\visual studio 2015\Projects\vacationManagement\vacationManagement\bin\Debug\vacationManagement.exe.config
+c:\users\10600798\documents\visual studio 2015\Projects\vacationManagement\vacationManagement\bin\Debug\vacationManagement.exe
+c:\users\10600798\documents\visual studio 2015\Projects\vacationManagement\vacationManagement\bin\Debug\vacationManagement.pdb
+c:\users\10600798\documents\visual studio 2015\Projects\vacationManagement\vacationManagement\obj\Debug\vacationManagement.csprojResolveAssemblyReference.cache
+c:\users\10600798\documents\visual studio 2015\Projects\vacationManagement\vacationManagement\obj\Debug\MainWindow.g.cs
+c:\users\10600798\documents\visual studio 2015\Projects\vacationManagement\vacationManagement\obj\Debug\App.g.cs
+c:\users\10600798\documents\visual studio 2015\Projects\vacationManagement\vacationManagement\obj\Debug\vacationManagement_MarkupCompile.cache
+c:\users\10600798\documents\visual studio 2015\Projects\vacationManagement\vacationManagement\obj\Debug\vacationManagement_MarkupCompile.lref
+c:\users\10600798\documents\visual studio 2015\Projects\vacationManagement\vacationManagement\obj\Debug\MainWindow.baml
+c:\users\10600798\documents\visual studio 2015\Projects\vacationManagement\vacationManagement\obj\Debug\vacationManagement.g.resources
+c:\users\10600798\documents\visual studio 2015\Projects\vacationManagement\vacationManagement\obj\Debug\vacationManagement.Properties.Resources.resources
+c:\users\10600798\documents\visual studio 2015\Projects\vacationManagement\vacationManagement\obj\Debug\vacationManagement.csproj.GenerateResource.Cache
+c:\users\10600798\documents\visual studio 2015\Projects\vacationManagement\vacationManagement\obj\Debug\vacationManagement.exe
+c:\users\10600798\documents\visual studio 2015\Projects\vacationManagement\vacationManagement\obj\Debug\vacationManagement.pdb
+C:\Users\10600798\Source\Repos\vacationManagement\vacationManagement\vacationManagement\bin\Debug\vacationManagement.exe.config
+C:\Users\10600798\Source\Repos\vacationManagement\vacationManagement\vacationManagement\obj\Debug\vacationManagement.exe
+C:\Users\10600798\Source\Repos\vacationManagement\vacationManagement\vacationManagement\obj\Debug\vacationManagement.pdb
