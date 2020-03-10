@@ -30,14 +30,15 @@
         <Label Grid.Row="0">Jefe:</Label>
         <Label Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" Name="user"></Label>
         <Label Grid.Row="2" VerticalAlignment="Center">Contraseña:</Label>
-        <TextBox Name="JefePassText" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3"/>
+        <PasswordBox Name="JefePassText" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3"/>
         <Label Grid.Row="4" Grid.Column="0" VerticalAlignment="Bottom">Empleado:</Label>
         <ComboBox Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3"  Name="EmpBox1">
         </ComboBox>
         <Label Grid.Row="6" VerticalAlignment="Center">Contraseña:</Label>
-        <TextBox Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="3" Name="EmpPassText"/>
+        <PasswordBox Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="3" Name="EmpPassText"/>
         <Label Grid.Row="8" VerticalAlignment="Center">Dias:</Label>
         <TextBox Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="3" Name="DaysText"/>
-        <Button Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="10" x:Name="btn" Click="btn_Click" Content="Actualizar"/>
+        <Button Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="10" x:Name="btn" Click="btn_Click" Content="Actualizar"/>
+        <Button Grid.Column="3" Grid.Row="10" x:Name="btnNewUser" Click="btnNewUser_Click" Content="Crear Empleado"/>
     </Grid>
 </Window>

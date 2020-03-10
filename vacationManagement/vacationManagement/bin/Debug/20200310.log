@@ -1,0 +1,47 @@
+Message :El proveedor 'Microsoft.ACE.OLEDB.12.0' no está registrado en el equipo local.<br/>
+StackTrace :   en System.Data.OleDb.OleDbServicesWrapper.GetDataSource(OleDbConnectionString constr, DataSourceWrapper& datasrcWrapper)
+   en System.Data.OleDb.OleDbConnectionInternal..ctor(OleDbConnectionString constr, OleDbConnection connection)
+   en System.Data.OleDb.OleDbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   en System.Data.ProviderBase.DbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   en System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   en System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   en System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   en System.Data.ProviderBase.DbConnectionInternal.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   en System.Data.OleDb.OleDbConnection.Open()
+   en vacationManagement.LoginForm.excelToTable(String conn, String user, String pass) en C:\Users\10600798\Source\Repos\vacationManagement\vacationManagement\vacationManagement\LoginForm.xaml.cs:línea 58
+Date :10/03/2020 11:25:09
+
+
+-----------------------------------------------------------------------------
+
+Message :'Hoja1$' no es un nombre válido. Asegúrese de que no incluya caracteres o signos de puntuación no válidos y que el nombre no sea demasiado largo.<br/>
+StackTrace :   en System.Data.OleDb.OleDbCommand.ExecuteCommandTextErrorHandling(OleDbHResult hr)
+   en System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object& executeResult)
+   en System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object& executeResult)
+   en System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   en System.Data.OleDb.OleDbCommand.ExecuteReader(CommandBehavior behavior)
+   en System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   en System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   en System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   en vacationManagement.MainWindow.excelToTable(String conn) en C:\Users\10600798\Source\Repos\vacationManagement\vacationManagement\vacationManagement\MainWindow.xaml.cs:línea 72
+Date :10/03/2020 11:50:25
+
+
+-----------------------------------------------------------------------------
+
+Message :'Hoja1$' no es un nombre válido. Asegúrese de que no incluya caracteres o signos de puntuación no válidos y que el nombre no sea demasiado largo.<br/>
+StackTrace :   en System.Data.OleDb.OleDbCommand.ExecuteCommandTextErrorHandling(OleDbHResult hr)
+   en System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object& executeResult)
+   en System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object& executeResult)
+   en System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   en System.Data.OleDb.OleDbCommand.ExecuteReader(CommandBehavior behavior)
+   en System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   en System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   en System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   en vacationManagement.MainWindow.excelToTable(String conn) en C:\Users\10600798\Source\Repos\vacationManagement\vacationManagement\vacationManagement\MainWindow.xaml.cs:línea 72
+Date :10/03/2020 11:51:19
+
+
+-----------------------------------------------------------------------------
+

@@ -46,7 +46,7 @@ namespace vacationManagement
             IEnumerable<DataRow> boss = employees.Select().Where(x => x.Field<string>("Trabajador") == ConfigurationManager.AppSettings["userName"]);
             IEnumerable<DataRow> employee = employees.Select().Where(x => x.Field<string>("Trabajador") == EmpBox1.SelectedItem.ToString());
 
-            if (employee.First().Field<string>("Contraseña") == EmpPassText.Text && boss.First().Field<string>("Contraseña") == JefePassText.Text)
+            if (employee.First().Field<string>("Contraseña") == EmpPassText.Password && boss.First().Field<string>("Contraseña") == JefePassText.Password)
                 updateExcel(EmpBox1.SelectedItem.ToString(), DaysText.Text);
             else
             {
@@ -103,6 +103,12 @@ namespace vacationManagement
                     ConfigurationManager.AppSettings["excelSheet"] + $"] SET Vacaciones = (Vacaciones - {days}), FechaActualizacion = '{DateTime.Now}' WHERE Trabajador = '{employee}'", objConn);
                 cmd.ExecuteNonQuery();
             }
+        }
+
+        private void btnNewUser_Click(object sender, RoutedEventArgs e)
+        {
+            NewUser nu = new NewUser();
+            nu.Show();
         }
     }
 }

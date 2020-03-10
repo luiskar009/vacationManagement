@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-c:\users\10600798\documents\visual studio 2015\Projects\vacationManagement\vacationManagement\obj\Debug\
+C:\Users\10600798\Source\Repos\vacationManagement\vacationManagement\vacationManagement\obj\Debug\
 vacationManagement
 none
 false
 DEBUG;TRACE
-c:\users\10600798\documents\visual studio 2015\Projects\vacationManagement\vacationManagement\App.xaml
-11151548125
+C:\Users\10600798\Source\Repos\vacationManagement\vacationManagement\vacationManagement\App.xaml
+3440182131
 
-5-2017746502
+8-1903872733
 14598183689
-MainWindow.xaml;
+LoginForm.xaml;MainWindow.xaml;NewUser.xaml;
 
 False
 
