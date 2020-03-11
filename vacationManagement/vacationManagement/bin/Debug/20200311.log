@@ -1,0 +1,26 @@
+Message :'Hoja1$' no es un nombre válido. Asegúrese de que no incluya caracteres o signos de puntuación no válidos y que el nombre no sea demasiado largo.<br/>
+StackTrace :   en System.Data.OleDb.OleDbCommand.ExecuteCommandTextErrorHandling(OleDbHResult hr)
+   en System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object& executeResult)
+   en System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object& executeResult)
+   en System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   en System.Data.OleDb.OleDbCommand.ExecuteReader(CommandBehavior behavior)
+   en System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   en System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   en System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   en vacationManagement.MainWindow.excelToTable(String conn) en C:\Users\10600798\Source\Repos\vacationManagement\vacationManagement\vacationManagement\MainWindow.xaml.cs:línea 72
+Date :11/03/2020 11:55:50
+
+
+-----------------------------------------------------------------------------
+
+Message :La conversión especificada no es válida.<br/>
+StackTrace :   en System.Data.DataRowExtensions.UnboxT`1.ValueField(Object value)
+   en vacationManagement.MainWindow.<>c.<excelToTable>b__4_0(DataRow x) en C:\Users\10600798\Source\Repos\vacationManagement\vacationManagement\vacationManagement\MainWindow.xaml.cs:línea 76
+   en System.Linq.Enumerable.WhereArrayIterator`1.MoveNext()
+   en System.Linq.Enumerable.Count[TSource](IEnumerable`1 source)
+   en vacationManagement.MainWindow.excelToTable(String conn) en C:\Users\10600798\Source\Repos\vacationManagement\vacationManagement\vacationManagement\MainWindow.xaml.cs:línea 78
+Date :11/03/2020 12:01:07
+
+
+-----------------------------------------------------------------------------
+

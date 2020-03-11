@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.OleDb;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -31,13 +33,30 @@ namespace vacationManagement
 
         private void Createbtn_Click(object sender, RoutedEventArgs e)
         {
-            using (OleDbConnection objConn = new OleDbConnection(conn))
+            try
             {
-                objConn.Open();
-                OleDbCommand cmd = new OleDbCommand("INSERT INTO [" +
-                    ConfigurationManager.AppSettings["excelSheet"] + $"](ID, Trabajador, Contraseña, Vacaciones, Administrador, Baja, FechaAlta) VALUES ('3', '{user.Text}', '{PassText.Password}', '0', '0', '0', '{DateTime.Now}')", objConn);
-                cmd.ExecuteNonQuery();
+                using (OleDbConnection objConn = new OleDbConnection(conn))
+                {
+                    objConn.Open();
+                    OleDbCommand cmd = new OleDbCommand("INSERT INTO [" +
+                        ConfigurationManager.AppSettings["excelSheet"] + $"](Trabajador, Contraseña, Vacaciones, Administrador, Baja, FechaAlta) VALUES ('{user.Text}', '{Cipher.Encrypt(PassText.Password, "pass")}', '0', '0', '0', '{DateTime.Now}')", objConn);
+                    cmd.ExecuteNonQuery();
+                }
+                MessageBox.Show("Empleado creado correctamente", "OK", MessageBoxButton.OK, MessageBoxImage.Information, MessageBoxResult.OK, MessageBoxOptions.DefaultDesktopOnly);
             }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error al crear el usuario", "Error", MessageBoxButton.OK, MessageBoxImage.Error, MessageBoxResult.OK, MessageBoxOptions.DefaultDesktopOnly);
+                using (StreamWriter writer = new StreamWriter($@"{System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)}\\{DateTime.Now.ToString("yyyyMMdd")}.log", true))
+                {
+                    writer.WriteLine("Message :" + ex.Message + "<br/>" + Environment.NewLine + "StackTrace :" + ex.StackTrace +
+                       "" + Environment.NewLine + "Date :" + DateTime.Now.ToString() + Environment.NewLine);
+                    writer.WriteLine(Environment.NewLine + "-----------------------------------------------------------------------------" + Environment.NewLine);
+                }
+            }
+
+            this.Close();
+            
         }
     }
 }

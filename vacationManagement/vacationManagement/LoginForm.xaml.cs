@@ -57,13 +57,14 @@ namespace vacationManagement
                 {
                     objConn.Open();
                     DataSet ds = new DataSet();
-                    OleDbCommand cmd = new OleDbCommand("SELECT * FROM [Hoja 1$]", objConn);
+                    OleDbCommand cmd = new OleDbCommand("SELECT * FROM [" +
+                    ConfigurationManager.AppSettings["excelSheet"] +"]", objConn);
                     OleDbDataAdapter oleda = new OleDbDataAdapter(cmd);
                     oleda.Fill(ds, "excelData");
                     dtResult = ds.Tables["excelData"];
                     objConn.Close();
 
-                    IEnumerable<DataRow> employee = dtResult.Select().Where(x => x.Field<string>("Trabajador").ToLower() == user.ToLower() && x.Field<string>("Contraseña") == Cipherpass
+                    IEnumerable<DataRow> employee = dtResult.Select().Where(x => x.Field<string>("Trabajador").ToLower() == user.ToLower() && x.Field<string>("Contraseña") == Cipher.Encrypt(pass, "pass")
                                                                                     && x.Field<Double>("Administrador") == -1);
 
                     if (employee.Count() > 0)

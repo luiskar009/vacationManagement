@@ -46,7 +46,7 @@ namespace vacationManagement
             IEnumerable<DataRow> boss = employees.Select().Where(x => x.Field<string>("Trabajador") == ConfigurationManager.AppSettings["userName"]);
             IEnumerable<DataRow> employee = employees.Select().Where(x => x.Field<string>("Trabajador") == EmpBox1.SelectedItem.ToString());
 
-            if (employee.First().Field<string>("Contraseña") == EmpPassText.Password && boss.First().Field<string>("Contraseña") == JefePassText.Password)
+            if (employee.First().Field<string>("Contraseña") == EmpPassText.Password && boss.First().Field<string>("Contraseña") == Cipher.Encrypt(JefePassText.Password, "pass"))
                 updateExcel(EmpBox1.SelectedItem.ToString(), DaysText.Text);
             else
             {
