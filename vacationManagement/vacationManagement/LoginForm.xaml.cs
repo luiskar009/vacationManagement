@@ -64,7 +64,7 @@ namespace vacationManagement
                     dtResult = ds.Tables["excelData"];
                     objConn.Close();
 
-                    IEnumerable<DataRow> employee = dtResult.Select().Where(x => x.Field<string>("Trabajador").ToLower() == user.ToLower() && x.Field<string>("Contraseña") == Cipher.Encrypt(pass, "pass")
+                    IEnumerable<DataRow> employee = dtResult.Select().Where(x => x.Field<string>("Trabajador").ToLower() == user.ToLower() && Cipher.Decrypt(x.Field<string>("Contraseña"), "pass") == pass
                                                                                     && x.Field<Double>("Administrador") == -1);
 
                     if (employee.Count() > 0)

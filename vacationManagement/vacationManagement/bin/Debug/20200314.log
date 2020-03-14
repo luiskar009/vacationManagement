@@ -1,0 +1,65 @@
+Message :No se puede convertir DBNull.Value al tipo 'System.Int32'. Utilice un tipo que acepte valores NULL.<br/>
+StackTrace :   en System.Data.DataRowExtensions.UnboxT`1.ValueField(Object value)
+   en System.Data.DataRowExtensions.Field[T](DataRow row, String columnName)
+   en vacationManagement.MainWindow.<>c.<excelToTable>b__4_0(DataRow x) en C:\Users\Ansalgar1\Source\Repos\vacationManagement\vacationManagement\vacationManagement\MainWindow.xaml.cs:línea 76
+   en System.Linq.Enumerable.WhereArrayIterator`1.MoveNext()
+   en System.Linq.Enumerable.Count[TSource](IEnumerable`1 source)
+   en vacationManagement.MainWindow.excelToTable(String conn) en C:\Users\Ansalgar1\Source\Repos\vacationManagement\vacationManagement\vacationManagement\MainWindow.xaml.cs:línea 78
+Date :14/03/2020 9:45:08
+
+
+-----------------------------------------------------------------------------
+
+Message :La conversión especificada no es válida.<br/>
+StackTrace :   en System.Data.DataRowExtensions.UnboxT`1.ValueField(Object value)
+   en System.Data.DataRowExtensions.Field[T](DataRow row, String columnName)
+   en vacationManagement.MainWindow.<>c.<excelToTable>b__4_0(DataRow x) en C:\Users\Ansalgar1\Source\Repos\vacationManagement\vacationManagement\vacationManagement\MainWindow.xaml.cs:línea 77
+   en System.Linq.Enumerable.WhereArrayIterator`1.MoveNext()
+   en System.Linq.Enumerable.Count[TSource](IEnumerable`1 source)
+   en vacationManagement.MainWindow.excelToTable(String conn) en C:\Users\Ansalgar1\Source\Repos\vacationManagement\vacationManagement\vacationManagement\MainWindow.xaml.cs:línea 79
+Date :14/03/2020 9:59:39
+
+
+-----------------------------------------------------------------------------
+
+Message :La conversión especificada no es válida.<br/>
+StackTrace :   en System.Data.DataRowExtensions.UnboxT`1.ValueField(Object value)
+   en System.Data.DataRowExtensions.Field[T](DataRow row, String columnName)
+   en vacationManagement.MainWindow.<>c.<excelToTable>b__4_0(DataRow x) en C:\Users\Ansalgar1\Source\Repos\vacationManagement\vacationManagement\vacationManagement\MainWindow.xaml.cs:línea 77
+   en System.Linq.Enumerable.WhereArrayIterator`1.MoveNext()
+   en System.Linq.Enumerable.Count[TSource](IEnumerable`1 source)
+   en vacationManagement.MainWindow.excelToTable(String conn) en C:\Users\Ansalgar1\Source\Repos\vacationManagement\vacationManagement\vacationManagement\MainWindow.xaml.cs:línea 79
+Date :14/03/2020 10:04:51
+
+
+-----------------------------------------------------------------------------
+
+Message :La conversión especificada no es válida.<br/>
+StackTrace :   en System.Data.DataRowExtensions.UnboxT`1.ValueField(Object value)
+   en System.Data.DataRowExtensions.Field[T](DataRow row, String columnName)
+   en vacationManagement.MainWindow.<>c.<excelToTable>b__4_0(DataRow x) en C:\Users\Ansalgar1\Source\Repos\vacationManagement\vacationManagement\vacationManagement\MainWindow.xaml.cs:línea 77
+   en System.Linq.Enumerable.WhereArrayIterator`1.MoveNext()
+   en System.Linq.Enumerable.Count[TSource](IEnumerable`1 source)
+   en vacationManagement.MainWindow.excelToTable(String conn) en C:\Users\Ansalgar1\Source\Repos\vacationManagement\vacationManagement\vacationManagement\MainWindow.xaml.cs:línea 79
+Date :14/03/2020 10:08:52
+
+
+-----------------------------------------------------------------------------
+
+Message :No coinciden los tipos de datos en la expresión de criterios.<br/>
+StackTrace :   en System.Data.OleDb.OleDbCommand.ExecuteCommandTextErrorHandling(OleDbHResult hr)
+   en System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object& executeResult)
+   en System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object& executeResult)
+   en System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object& executeResult)
+   en System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   en System.Data.OleDb.OleDbCommand.ExecuteReader(CommandBehavior behavior)
+   en System.Data.OleDb.OleDbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   en System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   en System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   en System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, String srcTable)
+   en vacationManagement.MainWindow.excelToTable(String conn) en C:\Users\Ansalgar1\Source\Repos\vacationManagement\vacationManagement\vacationManagement\MainWindow.xaml.cs:línea 73
+Date :14/03/2020 10:16:33
+
+
+-----------------------------------------------------------------------------
+

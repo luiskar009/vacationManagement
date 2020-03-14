@@ -1,0 +1,6 @@
+C:\Users\Ansalgar1\Source\Repos\vacationManagement\vacationManagement\vacationUpdate\bin\Release\vacationUpdate.exe.config
+C:\Users\Ansalgar1\Source\Repos\vacationManagement\vacationManagement\vacationUpdate\bin\Release\vacationUpdate.exe
+C:\Users\Ansalgar1\Source\Repos\vacationManagement\vacationManagement\vacationUpdate\bin\Release\vacationUpdate.pdb
+C:\Users\Ansalgar1\Source\Repos\vacationManagement\vacationManagement\vacationUpdate\obj\Release\vacationUpdate.csprojResolveAssemblyReference.cache
+C:\Users\Ansalgar1\Source\Repos\vacationManagement\vacationManagement\vacationUpdate\obj\Release\vacationUpdate.exe
+C:\Users\Ansalgar1\Source\Repos\vacationManagement\vacationManagement\vacationUpdate\obj\Release\vacationUpdate.pdb

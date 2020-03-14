@@ -31,28 +31,50 @@ namespace vacationManagement
         {
             InitializeComponent();
 
+            user.Content = ConfigurationManager.AppSettings["userName"];
             conn = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + ConfigurationManager.AppSettings["excelPath"] + ";Extended Properties='Excel 12.0;HDR=YES;';";
             employees = excelToTable(conn);
             EmpBox1.Items.Clear();
             EmpBox1.SelectedIndex = EmpBox1.Items.Add("-- Seleccione al empleado --");
             foreach (DataRow employee in employees.Rows)
             {
-                EmpBox1.Items.Add(employee[1]);
+                EmpBox1.Items.Add(employee["Trabajador"]);
             }
         }
 
         private void btn_Click(object sender, RoutedEventArgs e)
         {
-            IEnumerable<DataRow> boss = employees.Select().Where(x => x.Field<string>("Trabajador") == ConfigurationManager.AppSettings["userName"]);
-            IEnumerable<DataRow> employee = employees.Select().Where(x => x.Field<string>("Trabajador") == EmpBox1.SelectedItem.ToString());
-
-            if (employee.First().Field<string>("Contraseña") == EmpPassText.Password && boss.First().Field<string>("Contraseña") == Cipher.Encrypt(JefePassText.Password, "pass"))
-                updateExcel(EmpBox1.SelectedItem.ToString(), DaysText.Text);
-            else
+            try
             {
-                MessageBox.Show("Las contraseñas no coinciden", "Error", MessageBoxButton.OK, MessageBoxImage.Error, MessageBoxResult.OK, MessageBoxOptions.DefaultDesktopOnly);
-                return;
+                IEnumerable<DataRow> boss = employees.Select().Where(x => x.Field<string>("Trabajador").ToLower() == ConfigurationManager.AppSettings["userName"].ToLower());
+                IEnumerable<DataRow> employee = employees.Select().Where(x => x.Field<string>("Trabajador").ToLower() == EmpBox1.SelectedItem.ToString().ToLower());
+
+                if (Cipher.Decrypt(employee.First().Field<string>("Contraseña"), "pass") == EmpPassText.Password && Cipher.Decrypt(boss.First().Field<string>("Contraseña"), "pass") == JefePassText.Password)
+                    updateExcel(EmpBox1.SelectedItem.ToString(), DaysText.Text);
+                else
+                {
+                    MessageBox.Show("Las contraseñas no coinciden", "Error", MessageBoxButton.OK, MessageBoxImage.Error, MessageBoxResult.OK, MessageBoxOptions.DefaultDesktopOnly);
+                    return;
+                }
+                MessageBox.Show("El fichero ha sido actualizado correctamente", "Información", MessageBoxButton.OK, MessageBoxImage.Information, MessageBoxResult.OK, MessageBoxOptions.DefaultDesktopOnly);
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al actualizar el fichero. Compruebe el log para obtener mas información", "Error", MessageBoxButton.OK, MessageBoxImage.Error, MessageBoxResult.OK, MessageBoxOptions.DefaultDesktopOnly);
+                using (StreamWriter writer = new StreamWriter($@"{System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)}\\{DateTime.Now.ToString("yyyyMMdd")}.log", true))
+                {
+                    writer.WriteLine("Message :" + ex.Message + "<br/>" + Environment.NewLine + "StackTrace :" + ex.StackTrace +
+                       "" + Environment.NewLine + "Date :" + DateTime.Now.ToString() + Environment.NewLine);
+                    writer.WriteLine(Environment.NewLine + "-----------------------------------------------------------------------------" + Environment.NewLine);
+                }
+            }
+            finally
+            {
+                JefePassText.Password = "";
+                EmpPassText.Password = "";
+                EmpBox1.SelectedValue = "-- Seleccione al empleado --";
+                DaysText.Text = "";
+            }  
         }
 
         public static DataTable excelToTable(string conn)
@@ -73,7 +95,7 @@ namespace vacationManagement
                     dtResult = ds.Tables["excelData"];
                     objConn.Close();
 
-                    IEnumerable<DataRow> employee = dtResult.Select().Where(x => x.Field<Int32>("Baja") == 0 && x.Field<Int32>("Administrador") == 0);
+                    IEnumerable<DataRow> employee = dtResult.Select().Where(x => x.Field<Double>("Baja") == 0);
 
                     if (employee.Count() > 0)
                     {

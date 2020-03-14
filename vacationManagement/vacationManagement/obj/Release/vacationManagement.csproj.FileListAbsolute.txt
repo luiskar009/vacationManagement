@@ -1,0 +1,17 @@
+C:\Users\Ansalgar1\Source\Repos\vacationManagement\vacationManagement\vacationManagement\bin\Release\vacationManagement.exe.config
+C:\Users\Ansalgar1\Source\Repos\vacationManagement\vacationManagement\vacationManagement\bin\Release\vacationManagement.exe
+C:\Users\Ansalgar1\Source\Repos\vacationManagement\vacationManagement\vacationManagement\bin\Release\vacationManagement.pdb
+C:\Users\Ansalgar1\Source\Repos\vacationManagement\vacationManagement\vacationManagement\obj\Release\LoginForm.g.cs
+C:\Users\Ansalgar1\Source\Repos\vacationManagement\vacationManagement\vacationManagement\obj\Release\MainWindow.g.cs
+C:\Users\Ansalgar1\Source\Repos\vacationManagement\vacationManagement\vacationManagement\obj\Release\NewUser.g.cs
+C:\Users\Ansalgar1\Source\Repos\vacationManagement\vacationManagement\vacationManagement\obj\Release\App.g.cs
+C:\Users\Ansalgar1\Source\Repos\vacationManagement\vacationManagement\vacationManagement\obj\Release\vacationManagement_MarkupCompile.cache
+C:\Users\Ansalgar1\Source\Repos\vacationManagement\vacationManagement\vacationManagement\obj\Release\vacationManagement_MarkupCompile.lref
+C:\Users\Ansalgar1\Source\Repos\vacationManagement\vacationManagement\vacationManagement\obj\Release\LoginForm.baml
+C:\Users\Ansalgar1\Source\Repos\vacationManagement\vacationManagement\vacationManagement\obj\Release\MainWindow.baml
+C:\Users\Ansalgar1\Source\Repos\vacationManagement\vacationManagement\vacationManagement\obj\Release\NewUser.baml
+C:\Users\Ansalgar1\Source\Repos\vacationManagement\vacationManagement\vacationManagement\obj\Release\vacationManagement.g.resources
+C:\Users\Ansalgar1\Source\Repos\vacationManagement\vacationManagement\vacationManagement\obj\Release\vacationManagement.Properties.Resources.resources
+C:\Users\Ansalgar1\Source\Repos\vacationManagement\vacationManagement\vacationManagement\obj\Release\vacationManagement.csproj.GenerateResource.Cache
+C:\Users\Ansalgar1\Source\Repos\vacationManagement\vacationManagement\vacationManagement\obj\Release\vacationManagement.exe
+C:\Users\Ansalgar1\Source\Repos\vacationManagement\vacationManagement\vacationManagement\obj\Release\vacationManagement.pdb
