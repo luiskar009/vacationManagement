@@ -27,6 +27,7 @@ namespace vacationManagement
         public LoginForm()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

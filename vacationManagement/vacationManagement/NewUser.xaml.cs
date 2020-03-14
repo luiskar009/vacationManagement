@@ -28,6 +28,7 @@ namespace vacationManagement
         public NewUser()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             conn = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + ConfigurationManager.AppSettings["excelPath"] + ";Extended Properties='Excel 12.0;HDR=YES;';";
         }
 
@@ -55,6 +56,7 @@ namespace vacationManagement
                 }
             }
 
+            this.DialogResult = true;
             this.Close();
             
         }

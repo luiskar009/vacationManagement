@@ -5,9 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:vacationManagement"
         mc:Ignorable="d"
-        Title="MainWindow" Height="255" Width="450">
+        Title="MainWindow" WindowState="Maximized">
     <Grid Margin="10">
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*" />
+            <ColumnDefinition Width=".05*" />
             <ColumnDefinition Width="1*" />
             <ColumnDefinition Width="1*" />
             <ColumnDefinition Width="1*" />
@@ -26,19 +28,22 @@
             <RowDefinition Height="10*" />
             <RowDefinition Height="25*" />
             <RowDefinition Height="10*" />
+            <RowDefinition Height="400*" />
         </Grid.RowDefinitions>
-        <Label Grid.Row="0">Jefe:</Label>
-        <Label Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" Name="user"></Label>
-        <Label Grid.Row="2" VerticalAlignment="Center">Contraseña:</Label>
-        <PasswordBox Name="JefePassText" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3"/>
-        <Label Grid.Row="4" Grid.Column="0" VerticalAlignment="Bottom">Empleado:</Label>
-        <ComboBox Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3"  Name="EmpBox1">
+        <DataGrid Grid.Row="0" Grid.Column="0" Grid.RowSpan="13"  Name="gridEmployees" ItemsSource="{Binding}">
+        </DataGrid>
+        <Label Grid.Row="0" Grid.Column="2">Jefe:</Label>
+        <Label Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="3" Name="user"></Label>
+        <Label Grid.Row="2" Grid.Column="2" VerticalAlignment="Center">Contraseña:</Label>
+        <PasswordBox Name="JefePassText" Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="3"/>
+        <Label Grid.Row="4" Grid.Column="2" VerticalAlignment="Bottom">Empleado:</Label>
+        <ComboBox Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="3"  Name="EmpBox1">
         </ComboBox>
-        <Label Grid.Row="6" VerticalAlignment="Center">Contraseña:</Label>
-        <PasswordBox Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="3" Name="EmpPassText"/>
-        <Label Grid.Row="8" VerticalAlignment="Center">Dias:</Label>
-        <TextBox Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="3" Name="DaysText"/>
-        <Button Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="10" x:Name="btn" Click="btn_Click" Content="Actualizar"/>
-        <Button Grid.Column="3" Grid.Row="10" x:Name="btnNewUser" Click="btnNewUser_Click" Content="Crear Empleado"/>
+        <Label Grid.Row="6" Grid.Column="2" VerticalAlignment="Center">Contraseña:</Label>
+        <PasswordBox Grid.Row="6" Grid.Column="3" Grid.ColumnSpan="3" Name="EmpPassText"/>
+        <Label Grid.Row="8" Grid.Column="2" VerticalAlignment="Center">Dias:</Label>
+        <TextBox Grid.Row="8" Grid.Column="3" Grid.ColumnSpan="3" Name="DaysText"/>
+        <Button Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="10" x:Name="btn" Click="btn_Click" Content="Actualizar"/>
+        <Button Grid.Column="5" Grid.Row="10" x:Name="btnNewUser" Click="btnNewUser_Click" Content="Crear Empleado"/>
     </Grid>
 </Window>

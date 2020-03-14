@@ -30,16 +30,23 @@ namespace vacationManagement
         public MainWindow()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
 
             user.Content = ConfigurationManager.AppSettings["userName"];
             conn = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + ConfigurationManager.AppSettings["excelPath"] + ";Extended Properties='Excel 12.0;HDR=YES;';";
-            employees = excelToTable(conn);
+            fillDataGrid();
             EmpBox1.Items.Clear();
             EmpBox1.SelectedIndex = EmpBox1.Items.Add("-- Seleccione al empleado --");
             foreach (DataRow employee in employees.Rows)
             {
                 EmpBox1.Items.Add(employee["Trabajador"]);
             }
+        }
+
+        private void fillDataGrid()
+        {
+            employees = excelToTable(conn);
+            gridEmployees.DataContext = new DataView(employees).ToTable(false, new string[] { "Trabajador", "Vacaciones" }).DefaultView;
         }
 
         private void btn_Click(object sender, RoutedEventArgs e)
@@ -115,7 +122,7 @@ namespace vacationManagement
 
             return result;
         }
-
+        
         public void updateExcel(string employee, string days)
         {
             using (OleDbConnection objConn = new OleDbConnection(conn))
@@ -125,12 +132,16 @@ namespace vacationManagement
                     ConfigurationManager.AppSettings["excelSheet"] + $"] SET Vacaciones = (Vacaciones - {days}), FechaActualizacion = '{DateTime.Now}' WHERE Trabajador = '{employee}'", objConn);
                 cmd.ExecuteNonQuery();
             }
+            fillDataGrid();
         }
 
         private void btnNewUser_Click(object sender, RoutedEventArgs e)
         {
             NewUser nu = new NewUser();
-            nu.Show();
+            if(nu.ShowDialog() == true)
+            {
+                fillDataGrid();
+            }           
         }
     }
 }

@@ -63,3 +63,83 @@ Date :14/03/2020 10:16:33
 
 -----------------------------------------------------------------------------
 
+Message :'C:\Users\Ansalgar1\Desktop\Vacaciones.xlsx' no es una ruta de acceso válida. Asegúrese de que la ruta esté escrita correctamente y que esté conectado al servidor donde se encuentra el archivo.<br/>
+StackTrace :   en System.Data.OleDb.OleDbConnectionInternal..ctor(OleDbConnectionString constr, OleDbConnection connection)
+   en System.Data.OleDb.OleDbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   en System.Data.ProviderBase.DbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   en System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   en System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   en System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   en System.Data.ProviderBase.DbConnectionInternal.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   en System.Data.OleDb.OleDbConnection.Open()
+   en vacationManagement.MainWindow.excelToTable(String conn) en C:\Users\Fernando\Source\Repos\vacationManagement\vacationManagement\vacationManagement\MainWindow.xaml.cs:línea 90
+Date :14/03/2020 11:58:21
+
+
+-----------------------------------------------------------------------------
+
+Message :'C:\Users\Ansalgar1\Desktop\Vacaciones.xlsx' no es una ruta de acceso válida. Asegúrese de que la ruta esté escrita correctamente y que esté conectado al servidor donde se encuentra el archivo.<br/>
+StackTrace :   en System.Data.OleDb.OleDbConnectionInternal..ctor(OleDbConnectionString constr, OleDbConnection connection)
+   en System.Data.OleDb.OleDbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   en System.Data.ProviderBase.DbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   en System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   en System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   en System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   en System.Data.ProviderBase.DbConnectionInternal.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   en System.Data.OleDb.OleDbConnection.Open()
+   en vacationManagement.MainWindow.excelToTable(String conn) en C:\Users\Fernando\Source\Repos\vacationManagement\vacationManagement\vacationManagement\MainWindow.xaml.cs:línea 91
+Date :14/03/2020 12:02:19
+
+
+-----------------------------------------------------------------------------
+
+Message :No se puede convertir DBNull.Value al tipo 'System.Double'. Utilice un tipo que acepte valores NULL.<br/>
+StackTrace :   en System.Data.DataRowExtensions.UnboxT`1.ValueField(Object value)
+   en System.Data.DataRowExtensions.Field[T](DataRow row, String columnName)
+   en vacationManagement.MainWindow.<>c.<excelToTable>b__4_0(DataRow x) en C:\Users\Fernando\Source\Repos\vacationManagement\vacationManagement\vacationManagement\MainWindow.xaml.cs:línea 100
+   en System.Linq.Enumerable.WhereArrayIterator`1.MoveNext()
+   en System.Linq.Enumerable.Count[TSource](IEnumerable`1 source)
+   en vacationManagement.MainWindow.excelToTable(String conn) en C:\Users\Fernando\Source\Repos\vacationManagement\vacationManagement\vacationManagement\MainWindow.xaml.cs:línea 102
+Date :14/03/2020 12:05:54
+
+
+-----------------------------------------------------------------------------
+
+Message :No se puede convertir DBNull.Value al tipo 'System.Double'. Utilice un tipo que acepte valores NULL.<br/>
+StackTrace :   en System.Data.DataRowExtensions.UnboxT`1.ValueField(Object value)
+   en System.Data.DataRowExtensions.Field[T](DataRow row, String columnName)
+   en vacationManagement.MainWindow.<>c.<excelToTable>b__4_0(DataRow x) en C:\Users\Fernando\Source\Repos\vacationManagement\vacationManagement\vacationManagement\MainWindow.xaml.cs:línea 100
+   en System.Linq.Enumerable.WhereArrayIterator`1.MoveNext()
+   en System.Linq.Enumerable.Count[TSource](IEnumerable`1 source)
+   en vacationManagement.MainWindow.excelToTable(String conn) en C:\Users\Fernando\Source\Repos\vacationManagement\vacationManagement\vacationManagement\MainWindow.xaml.cs:línea 102
+Date :14/03/2020 12:06:46
+
+
+-----------------------------------------------------------------------------
+
+Message :No se puede convertir DBNull.Value al tipo 'System.Double'. Utilice un tipo que acepte valores NULL.<br/>
+StackTrace :   en System.Data.DataRowExtensions.UnboxT`1.ValueField(Object value)
+   en System.Data.DataRowExtensions.Field[T](DataRow row, String columnName)
+   en vacationManagement.MainWindow.<>c.<excelToTable>b__4_0(DataRow x) en C:\Users\Fernando\Source\Repos\vacationManagement\vacationManagement\vacationManagement\MainWindow.xaml.cs:línea 100
+   en System.Linq.Enumerable.WhereArrayIterator`1.MoveNext()
+   en System.Linq.Enumerable.Count[TSource](IEnumerable`1 source)
+   en vacationManagement.MainWindow.excelToTable(String conn) en C:\Users\Fernando\Source\Repos\vacationManagement\vacationManagement\vacationManagement\MainWindow.xaml.cs:línea 102
+Date :14/03/2020 12:08:03
+
+
+-----------------------------------------------------------------------------
+
+Message :La conversión especificada no es válida.<br/>
+StackTrace :   en System.Data.DataRowExtensions.UnboxT`1.ValueField(Object value)
+   en System.Data.DataRowExtensions.Field[T](DataRow row, String columnName)
+   en vacationManagement.MainWindow.<>c.<excelToTable>b__4_0(DataRow x) en C:\Users\Fernando\Source\Repos\vacationManagement\vacationManagement\vacationManagement\MainWindow.xaml.cs:línea 100
+   en System.Linq.Enumerable.WhereArrayIterator`1.MoveNext()
+   en System.Linq.Enumerable.Count[TSource](IEnumerable`1 source)
+   en vacationManagement.MainWindow.excelToTable(String conn) en C:\Users\Fernando\Source\Repos\vacationManagement\vacationManagement\vacationManagement\MainWindow.xaml.cs:línea 102
+Date :14/03/2020 12:09:30
+
+
+-----------------------------------------------------------------------------
+

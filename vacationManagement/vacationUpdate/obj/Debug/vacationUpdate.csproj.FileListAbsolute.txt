@@ -10,3 +10,9 @@ C:\Users\Ansalgar1\Source\Repos\vacationManagement\vacationManagement\vacationUp
 C:\Users\Ansalgar1\Source\Repos\vacationManagement\vacationManagement\vacationUpdate\bin\Debug\vacationUpdate.exe
 C:\Users\Ansalgar1\Source\Repos\vacationManagement\vacationManagement\vacationUpdate\bin\Debug\vacationUpdate.pdb
 C:\Users\Ansalgar1\Source\Repos\vacationManagement\vacationManagement\vacationUpdate\obj\Debug\vacationUpdate.csprojResolveAssemblyReference.cache
+C:\Users\Fernando\Source\Repos\vacationManagement\vacationManagement\vacationUpdate\bin\Debug\vacationUpdate.exe.config
+C:\Users\Fernando\Source\Repos\vacationManagement\vacationManagement\vacationUpdate\bin\Debug\vacationUpdate.exe
+C:\Users\Fernando\Source\Repos\vacationManagement\vacationManagement\vacationUpdate\bin\Debug\vacationUpdate.pdb
+C:\Users\Fernando\Source\Repos\vacationManagement\vacationManagement\vacationUpdate\obj\Debug\vacationUpdate.csprojResolveAssemblyReference.cache
+C:\Users\Fernando\Source\Repos\vacationManagement\vacationManagement\vacationUpdate\obj\Debug\vacationUpdate.exe
+C:\Users\Fernando\Source\Repos\vacationManagement\vacationManagement\vacationUpdate\obj\Debug\vacationUpdate.pdb
