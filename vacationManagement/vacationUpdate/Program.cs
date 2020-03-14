@@ -22,7 +22,7 @@ namespace vacationUpdate
             {
                 objConn.Open();
                 OleDbCommand cmd = new OleDbCommand("UPDATE [" +
-                    ConfigurationManager.AppSettings["excelSheet"] + $"] SET Vacaciones = (Vacaciones + 2), FechaActualizacion = '{DateTime.Now}'", objConn);
+                    ConfigurationManager.AppSettings["excelSheet"] + $"] SET Vacaciones = (Vacaciones + {ConfigurationManager.AppSettings["addDays"]}), FechaActualizacion = '{DateTime.Now}'", objConn);
                 cmd.ExecuteNonQuery();
             }
         }
