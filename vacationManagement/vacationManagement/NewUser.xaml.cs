@@ -40,7 +40,7 @@ namespace vacationManagement
                 {
                     objConn.Open();
                     OleDbCommand cmd = new OleDbCommand("INSERT INTO [" +
-                        ConfigurationManager.AppSettings["excelSheet"] + $"](Trabajador, Contraseña, Vacaciones, Administrador, Baja, FechaAlta) VALUES ('{user.Text}', '{Cipher.Encrypt(PassText.Password, "pass")}', '0', '0', '0', '{DateTime.Now}')", objConn);
+                        ConfigurationManager.AppSettings["excelSheet"] + $"](Trabajador, Contraseña, Vacaciones, Administrador, FechaAlta) VALUES ('{user.Text}', '{Cipher.Encrypt(PassText.Password, "pass")}', '0', '0', '{DateTime.Now}')", objConn);
                     cmd.ExecuteNonQuery();
                 }
                 MessageBox.Show("Empleado creado correctamente", "OK", MessageBoxButton.OK, MessageBoxImage.Information, MessageBoxResult.OK, MessageBoxOptions.DefaultDesktopOnly);

@@ -53,8 +53,8 @@ namespace vacationManagement
         {
             try
             {
-                IEnumerable<DataRow> boss = employees.Select().Where(x => x.Field<string>("Trabajador").ToLower() == ConfigurationManager.AppSettings["userName"].ToLower());
-                IEnumerable<DataRow> employee = employees.Select().Where(x => x.Field<string>("Trabajador").ToLower() == EmpBox1.SelectedItem.ToString().ToLower());
+                IEnumerable<DataRow> boss = employees.Select().Where(x => string.Equals(x.Field<string>("Trabajador"), ConfigurationManager.AppSettings["userName"], StringComparison.OrdinalIgnoreCase));
+                IEnumerable<DataRow> employee = employees.Select().Where(x => string.Equals(x.Field<string>("Trabajador"), EmpBox1.SelectedItem.ToString(), StringComparison.OrdinalIgnoreCase));
 
                 if (Cipher.Decrypt(employee.First().Field<string>("Contraseña"), "pass") == EmpPassText.Password && Cipher.Decrypt(boss.First().Field<string>("Contraseña"), "pass") == JefePassText.Password)
                     updateExcel(EmpBox1.SelectedItem.ToString(), DaysText.Text);
@@ -102,7 +102,7 @@ namespace vacationManagement
                     dtResult = ds.Tables["excelData"];
                     objConn.Close();
 
-                    IEnumerable<DataRow> employee = dtResult.Select().Where(x => x.Field<Double>("Baja") == 0);
+                    IEnumerable<DataRow> employee = dtResult.Select();
 
                     if (employee.Count() > 0)
                     {

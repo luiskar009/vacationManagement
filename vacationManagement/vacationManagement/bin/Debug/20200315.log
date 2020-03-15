@@ -1,0 +1,12 @@
+Message :No se puede convertir DBNull.Value al tipo 'System.Double'. Utilice un tipo que acepte valores NULL.<br/>
+StackTrace :   en System.Data.DataRowExtensions.UnboxT`1.ValueField(Object value)
+   en System.Data.DataRowExtensions.Field[T](DataRow row, String columnName)
+   en vacationManagement.MainWindow.<>c.<excelToTable>b__5_0(DataRow x) en C:\Users\Ansalgar1\Source\Repos\vacationManagement\vacationManagement\vacationManagement\MainWindow.xaml.cs:línea 105
+   en System.Linq.Enumerable.WhereArrayIterator`1.MoveNext()
+   en System.Linq.Enumerable.Count[TSource](IEnumerable`1 source)
+   en vacationManagement.MainWindow.excelToTable(String conn) en C:\Users\Ansalgar1\Source\Repos\vacationManagement\vacationManagement\vacationManagement\MainWindow.xaml.cs:línea 107
+Date :15/03/2020 12:48:49
+
+
+-----------------------------------------------------------------------------
+
