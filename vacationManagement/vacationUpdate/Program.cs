@@ -5,6 +5,8 @@ using System.Data.OleDb;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Reflection;
 
 namespace vacationUpdate
 {
@@ -12,8 +14,21 @@ namespace vacationUpdate
     {
         static void Main(string[] args)
         {
-            string conn = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + ConfigurationManager.AppSettings["excelPath"] + ";Extended Properties='Excel 12.0;HDR=YES;';";
-            updateExcel(conn);
+            try
+            {
+                string conn = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + ConfigurationManager.AppSettings["excelPath"] + ";Extended Properties='Excel 12.0;HDR=YES;';";
+                updateExcel(conn);
+            }
+            catch(Exception ex)
+            {
+                using (StreamWriter writer = new StreamWriter($@"{System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)}\\{DateTime.Now.ToString("yyyyMMdd")}.log", true))
+                {
+                    writer.WriteLine("Message :" + ex.Message + "<br/>" + Environment.NewLine + "StackTrace :" + ex.StackTrace +
+                       "" + Environment.NewLine + "Date :" + DateTime.Now.ToString() + Environment.NewLine);
+                    writer.WriteLine(Environment.NewLine + "-----------------------------------------------------------------------------" + Environment.NewLine);
+                }
+            }
+            
         }
 
         public static void updateExcel(string conn)
@@ -90,7 +105,7 @@ namespace vacationUpdate
 
                 config.AppSettings.Settings["lastUpdateMonth"].Value = DateTime.Now.Month.ToString();
                 config.AppSettings.Settings["lastUpdateYear"].Value = DateTime.Now.Year.ToString();
-                config.Save(ConfigurationSaveMode.Modified);
+                config.Save(ConfigurationSaveMode.Minimal);
             }
         }
     }
